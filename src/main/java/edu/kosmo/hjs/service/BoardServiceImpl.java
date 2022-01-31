@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import edu.kosmo.hjs.mapper.BoardMapper;
 import edu.kosmo.hjs.vo.BoardVO;
 
+
 @Service
 public class BoardServiceImpl implements BoardService {
 	
@@ -18,6 +19,12 @@ public class BoardServiceImpl implements BoardService {
 	public List<BoardVO> getList() {
 		
 		return boardMapper.getList();
+	}
+	
+	@Override
+	public BoardVO get(int bno) {
+		// TODO Auto-generated method stub
+		return boardMapper.read(bno);
 	}
 	
 }

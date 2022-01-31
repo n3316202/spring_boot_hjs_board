@@ -83,7 +83,7 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
-		
+
 		<!-- jstl 라이브러리 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -93,6 +93,17 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://146.56.137.240:8282/manager/text</url>
+					<username>admin</username>
+					<password>1234</password>
+				</configuration>
+			</plugin>
+			<!-- cmd에 입력 ( 배포 ) : mvnw.cmd tomcat7:redeploy -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

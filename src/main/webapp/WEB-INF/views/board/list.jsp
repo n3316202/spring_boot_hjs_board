@@ -22,7 +22,7 @@
 			<td>${board.bname}</td>
 			<td>
 				<c:forEach begin="1" end="${board.bindent}">-</c:forEach>
-				<a href="content_view?bId=${board.bid}">${board.btitle}</a></td>
+				<a href="${pageContext.request.contextPath}/jboard/content_view?bid=${board.bid}">${board.btitle}</a></td>
 			<td>${board.bdate}</td>
 			<td>${board.bhit}</td>
 		</tr>

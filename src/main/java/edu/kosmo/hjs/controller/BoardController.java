@@ -1,5 +1,7 @@
 package edu.kosmo.hjs.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,12 +28,14 @@ public class BoardController {
 		return "/board/list";
 	}
 	
-	@GetMapping("/write_view")
-	public String write_view() {
+	@GetMapping("/content_view")
+	public String content_view(HttpServletRequest request, Model model) throws Exception{
+		System.out.println("content_view()");
 
-		log.info("write_view()...");
+		String bid = request.getParameter("bid");		
+		model.addAttribute("content_view", boardService.get(Integer.valueOf(bid)));
 		
-		return "/board/write_view";
+		return "/board/content_view";
 	}
 	
 }

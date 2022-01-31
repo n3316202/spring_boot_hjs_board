@@ -10,4 +10,5 @@ import edu.kosmo.hjs.vo.BoardVO;
 public interface BoardMapper {
 	public List<BoardVO> getList();
 	public int boardCount();
+	public BoardVO read(int bno);
 }

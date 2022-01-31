@@ -12,5 +12,11 @@
 	<select id="boardCount" >
 		select count(*) from mvc_board	
 	</select>
+	
+	<select id="read" resultType="edu.kosmo.hjs.vo.BoardVO">
+	<![CDATA[
+		select * from mvc_board where bId = #{bid}
+	]]>
+	</select>
 		
 </mapper>
