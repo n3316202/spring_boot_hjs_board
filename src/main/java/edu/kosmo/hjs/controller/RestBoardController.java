@@ -65,7 +65,7 @@ public class RestBoardController {
 	}
 	
 
-	@PostMapping("/write")
+	@PostMapping("/")
 	public ResponseEntity<String> write(@RequestBody BoardVO boardVO) {
 
 		log.info("axios write()......");
