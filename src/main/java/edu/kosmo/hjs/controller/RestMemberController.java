@@ -23,8 +23,7 @@ public class RestMemberController {
 
 	@Autowired
 	private MemberService memberService;
-
-
+	
 
 	@PostMapping(path = "/register",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ResponseVO> register(MemberVO memberVO) {
